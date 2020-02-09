@@ -78,7 +78,7 @@ class EmployeeCBV(TextSerialize,View,HttpResponseMixin):
                 if emp is not None:
                     json_data = self.serialize([emp,])
                     return self.rendertohttpres(json_data,status=200)
-
+            response={'msg':'test of github'}
             response={'msg':'given id employee does not found'}
             json_data=json.dumps(response)
             return self.rendertohttpres(json_data)
